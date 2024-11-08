@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Pyzzle - Sliding Puzzle Game" />
+		<meta property="og:description" content="Challenge yourself with Pyzzle, the interactive sliding puzzle game!" />
+		<meta
+			property="og:image"
+			content="https://imgproxy-retcat.assets.schwarz/Lne4Tq7sooZ2XsomXrnNVRpeDgzsnCNJ-Mpk8uRF5bE/sm:1/w:1500/h:1125/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvcnMvMS85QTFFOTMxRTVDN0E2ODlDQUUyMkMwNTh/BMDlCMzBBM0Y2RTRDNjlDMjYzNkI4MTk5RjBBNjA4RjlEQTJDRjJCLmpwZw.jpg"
+		/>
+		<meta
+			property="og:url"
+			content="https://imgproxy-retcat.assets.schwarz/Lne4Tq7sooZ2XsomXrnNVRpeDgzsnCNJ-Mpk8uRF5bE/sm:1/w:1500/h:1125/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvcnMvMS85QTFFOTMxRTVDN0E2ODlDQUUyMkMwNTh/BMDlCMzBBM0Y2RTRDNjlDMjYzNkI4MTk5RjBBNjA4RjlEQTJDRjJCLmpwZw.jpg"
+		/>
+		<meta property="og:type" content="website" />
+
+		<!-- Title and other tags -->
+		<title>Pyzzle - Sliding Puzzle Game</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="game-container">
+				<div class="puzzle-grid" id="puzzleGrid"></div>
+				<div class="controls">
+					<div class="step-counter">
+						Step:
+						<span id="stepCounter">0</span>
+					</div>
+					<div class="buttons">
+						<button id="spaceButton">Start/Pause (SPACE)</button>
+						<button id="enterButton">Show Solution (ENTER)</button>
+					</div>
+				</div>
+				<div class="algorithm-selector">
+					<select id="algorithmSelect">
+						<option value="bfs">Breadth First Search</option>
+						<option value="best_first">Best First Search</option>
+						<option value="astar">A* Algorithm</option>
+					</select>
+					<select id="heuristicSelect">
+						<option value="hamming">Hamming Distance</option>
+						<option value="manhattan">Manhattan Distance</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background: #1a1a1a;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.puzzle-tile {
+  width: 80px;
+  height: 80px;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* .puzzle-tile:hover:not(.empty) {
+  background: #3a3a3a;
+} */
+
+/* .puzzle-tile.empty {
+  background: #1a1a1a;
+} */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.algorithm-selector {
+  display: flex;
+  gap: 1rem;
+}
+
+select {
+  padding: 0.5em;
+  border-radius: 4px;
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #646cff;
+}
+
+.step-counter {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+
+  .puzzle-tile {
+    background: #e0e0e0;
+  }
+
+  .puzzle-tile:hover:not(.empty) {
+    background: #d0d0d0;
+  }
+
+  .puzzle-tile.empty {
+    background: #f0f0f0;
+  }
+
+  select {
+    background: #ffffff;
+    color: #213547;
+  }
+}
+
+.puzzle-tile {
+  width: 100px;
+  /* Size of each tile */
+  height: 100px;
+  /* Size of each tile */
+  display: inline-block;
+  background-size: 300px 300px;
+  /* Size of the whole image (3x3 grid of tiles) */
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* border: 1px solid #ccc;   */
+}
+
+.empty {
+  background: none;
+  /* Empty tile has no background */
+}
