@@ -40,7 +40,7 @@ export class GameController {
 	async fetchSolution() {
 		// try {
 		// console.log(this.game.board);
-		const response = await fetch("http://localhost:8000/api/solve/", {
+		const response = await fetch("http://localhost:8000/puzzle/solve/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
